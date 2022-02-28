@@ -1,7 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import {useEffect, useState} from 'react';
 
 function App() {
+const [data,setData]=useState("");
+  useEffect(()=>{
+    fetch('https://t02-node.herokuapp.com/test')
+    .then(response => response.json())
+    .then(json => console.log(json))
+  },[])
   return (
     <div className="App">
       <header className="App-header">
