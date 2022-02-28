@@ -5,7 +5,7 @@ const port = process.env.PORT || 3001
 
 app.use(express.static(path.resolve(__dirname, '../client/build')));
 
-app.get('/', (req, res) => {
+app.get('/test', (req, res) => {
   res.send('Hello World!')
 })
 
