@@ -6,8 +6,8 @@ function App() {
 
   useEffect(()=>{
     fetch('/test')
-    .then(response => response.json())
-    .then(json => console.log(json))
+    .then(response => response.text())
+    .then(data => console.log(data))
   },[])
   return (
     <div className="App">
