@@ -3,9 +3,9 @@ import './App.css';
 import {useEffect, useState} from 'react';
 
 function App() {
-const [data,setData]=useState("");
+
   useEffect(()=>{
-    fetch('https://t02-node.herokuapp.com/test')
+    fetch('/test')
     .then(response => response.json())
     .then(json => console.log(json))
   },[])
